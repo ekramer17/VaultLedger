@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.bandl.com" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.bandl.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bandl.com">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="RequestTicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RequestTicketResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveAccounts">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetrieveAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveAccountsResult" type="tns:ArrayOfAccountDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAccountDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccountDetails" nillable="true" type="tns:AccountDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccountDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Primary" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TicketHeader" type="tns:TicketHeader" />
+      <s:complexType name="TicketHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ticket" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetrieveMediumTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetrieveMediumTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveMediumTypesResult" type="tns:ArrayOfMediumTypeDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMediumTypeDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MediumTypeDetails" nillable="true" type="tns:MediumTypeDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MediumTypeDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecallCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Container" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TwoSided" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TransmitSendLists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendLists" type="tns:ArrayOfRMMSendListDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRMMSendListDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RMMSendListDetails" nillable="true" type="tns:RMMSendListDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RMMSendListDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfRMMSendItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRMMSendItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RMMSendItem" nillable="true" type="tns:RMMSendItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RMMSendItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrpCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TransmitSendListsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TransmitReceiveLists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="receiveLists" type="tns:ArrayOfRMMReceiveListDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRMMReceiveListDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RMMReceiveListDetails" nillable="true" type="tns:RMMReceiveListDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RMMReceiveListDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfRMMReceiveItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRMMReceiveItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RMMReceiveItem" nillable="true" type="tns:RMMReceiveItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RMMReceiveItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TransmitReceiveListsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TransmitDisasterCodeLists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="disasterCodeLists" type="tns:ArrayOfRMMDisasterCodeListDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRMMDisasterCodeListDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RMMDisasterCodeListDetails" nillable="true" type="tns:RMMDisasterCodeListDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RMMDisasterCodeListDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfRMMDisasterCodeItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRMMDisasterCodeItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RMMDisasterCodeItem" nillable="true" type="tns:RMMDisasterCodeItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RMMDisasterCodeItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrpCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TransmitDisasterCodeListsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetInventoryFileHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryFileHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryFileHashResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadInventory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadInventoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadInventoryResult" type="tns:InventoryDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InventoryDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HashCode" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfInventoryItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInventoryItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InventoryItem" nillable="true" type="tns:InventoryItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InventoryItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HotStatus" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestTicket" />
+  </wsdl:message>
+  <wsdl:message name="RequestTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveAccounts" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAccountsTicketHeader">
+    <wsdl:part name="TicketHeader" element="tns:TicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMediumTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveMediumTypes" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMediumTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveMediumTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMediumTypesTicketHeader">
+    <wsdl:part name="TicketHeader" element="tns:TicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="TransmitSendListsSoapIn">
+    <wsdl:part name="parameters" element="tns:TransmitSendLists" />
+  </wsdl:message>
+  <wsdl:message name="TransmitSendListsSoapOut">
+    <wsdl:part name="parameters" element="tns:TransmitSendListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransmitSendListsTicketHeader">
+    <wsdl:part name="TicketHeader" element="tns:TicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="TransmitReceiveListsSoapIn">
+    <wsdl:part name="parameters" element="tns:TransmitReceiveLists" />
+  </wsdl:message>
+  <wsdl:message name="TransmitReceiveListsSoapOut">
+    <wsdl:part name="parameters" element="tns:TransmitReceiveListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransmitReceiveListsTicketHeader">
+    <wsdl:part name="TicketHeader" element="tns:TicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="TransmitDisasterCodeListsSoapIn">
+    <wsdl:part name="parameters" element="tns:TransmitDisasterCodeLists" />
+  </wsdl:message>
+  <wsdl:message name="TransmitDisasterCodeListsSoapOut">
+    <wsdl:part name="parameters" element="tns:TransmitDisasterCodeListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransmitDisasterCodeListsTicketHeader">
+    <wsdl:part name="TicketHeader" element="tns:TicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryFileHashSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryFileHash" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryFileHashSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryFileHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryFileHashTicketHeader">
+    <wsdl:part name="TicketHeader" element="tns:TicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="DownloadInventorySoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadInventory" />
+  </wsdl:message>
+  <wsdl:message name="DownloadInventorySoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadInventoryTicketHeader">
+    <wsdl:part name="TicketHeader" element="tns:TicketHeader" />
+  </wsdl:message>
+  <wsdl:portType name="RecallServiceSoap">
+    <wsdl:operation name="RequestTicket">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Requests an authentication ticket from the web service to use with future calls.</documentation>
+      <wsdl:input message="tns:RequestTicketSoapIn" />
+      <wsdl:output message="tns:RequestTicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAccounts">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieves all the accounts associated with the given global account.</documentation>
+      <wsdl:input message="tns:RetrieveAccountsSoapIn" />
+      <wsdl:output message="tns:RetrieveAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMediumTypes">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieves all the medium types.</documentation>
+      <wsdl:input message="tns:RetrieveMediumTypesSoapIn" />
+      <wsdl:output message="tns:RetrieveMediumTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransmitSendLists">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Transmits an array of send list to the server.</documentation>
+      <wsdl:input message="tns:TransmitSendListsSoapIn" />
+      <wsdl:output message="tns:TransmitSendListsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransmitReceiveLists">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Transmits an array of receive lists to the server.</documentation>
+      <wsdl:input message="tns:TransmitReceiveListsSoapIn" />
+      <wsdl:output message="tns:TransmitReceiveListsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransmitDisasterCodeLists">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Transmits an array of disaster code lists to the server.</documentation>
+      <wsdl:input message="tns:TransmitDisasterCodeListsSoapIn" />
+      <wsdl:output message="tns:TransmitDisasterCodeListsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryFileHash">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieves the hash of the inventory file for the given account.</documentation>
+      <wsdl:input message="tns:GetInventoryFileHashSoapIn" />
+      <wsdl:output message="tns:GetInventoryFileHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadInventory">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieves the inventory for the given account.</documentation>
+      <wsdl:input message="tns:DownloadInventorySoapIn" />
+      <wsdl:output message="tns:DownloadInventorySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RecallServiceSoap" type="tns:RecallServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="RequestTicket">
+      <soap:operation soapAction="http://www.bandl.com/RequestTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAccounts">
+      <soap:operation soapAction="http://www.bandl.com/RetrieveAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RetrieveAccountsTicketHeader" part="TicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMediumTypes">
+      <soap:operation soapAction="http://www.bandl.com/RetrieveMediumTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RetrieveMediumTypesTicketHeader" part="TicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransmitSendLists">
+      <soap:operation soapAction="http://www.bandl.com/TransmitSendLists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TransmitSendListsTicketHeader" part="TicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransmitReceiveLists">
+      <soap:operation soapAction="http://www.bandl.com/TransmitReceiveLists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TransmitReceiveListsTicketHeader" part="TicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransmitDisasterCodeLists">
+      <soap:operation soapAction="http://www.bandl.com/TransmitDisasterCodeLists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TransmitDisasterCodeListsTicketHeader" part="TicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryFileHash">
+      <soap:operation soapAction="http://www.bandl.com/GetInventoryFileHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetInventoryFileHashTicketHeader" part="TicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadInventory">
+      <soap:operation soapAction="http://www.bandl.com/DownloadInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DownloadInventoryTicketHeader" part="TicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RecallService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">A web service to be hosted at the central Recall location.</documentation>
+    <wsdl:port name="RecallServiceSoap" binding="tns:RecallServiceSoap">
+      <soap:address location="http://localhost/Bandl.Service.VaultLedger.Recall/VaultLedger.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

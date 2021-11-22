@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knock", "Knock\Knock.csproj", "{43B6837B-48FF-4E6B-A067-1C537DADCEE7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {43C32035-D005-42D1-ADD9-32C65125DED3}
+		SccProjectUniqueName1 = Knock\\Knock.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Knock\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{43B6837B-48FF-4E6B-A067-1C537DADCEE7}.Debug.ActiveCfg = Debug|.NET
+		{43B6837B-48FF-4E6B-A067-1C537DADCEE7}.Debug.Build.0 = Debug|.NET
+		{43B6837B-48FF-4E6B-A067-1C537DADCEE7}.Release.ActiveCfg = Release|.NET
+		{43B6837B-48FF-4E6B-A067-1C537DADCEE7}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		CommonAssemblyDelaySign.cs = CommonAssemblyDelaySign.cs
+		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

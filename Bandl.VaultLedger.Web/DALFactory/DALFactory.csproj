@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB7C2528-63DD-4C96-86F7-183D0A9CE96D}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Bandl.Library.VaultLedger.DALFactory</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\bandl.keys</AssemblyOriginatorKeyFile>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bandl.Library.VaultLedger.DALFactory</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccAuxPath />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Name>IDAL</Name>
+      <Project>{ECDAAC56-FCE2-4129-A00D-9569D3457E99}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{C766727A-7145-46A8-976B-18D235E3D7A6}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyDelaySign.cs">
+      <Link>CommonAssemblyDelaySign.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccountFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActionListFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AuditTrailFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConnectionFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisasterCodeListFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmailGroupFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmailServerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExternalSiteFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FtpProfileFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InventoryConflictFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InventoryFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MediumFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MediumTypeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OperatorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatternDefaultCaseFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatternDefaultMediumFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatternIgnoreFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PreferenceFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductLicenseFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReceiveListFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SealedCaseFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendListFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SubscriptionFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TabPageDefaultFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

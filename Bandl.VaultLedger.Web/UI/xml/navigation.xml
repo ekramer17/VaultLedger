@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+	<home baseurl="http://localhost/bl.sched/" url="index.aspx">
+		<constants>
+			<constant label="My Profile" url="[BASE_URL]administrative-tools/user-detail.aspx"/>
+			<constant label="Help" url="#"/>
+			<constant label="Logout" url="[BASE_URL]login.aspx?logout=true"/>
+		</constants>
+		<levelOnes>
+			<levelOne label="Home" srcOn="l1_home_1.gif" srcOff="l1_home_0.gif" url="default.aspx"/>
+			<levelOne label="Media Library" srcOn="l1_media_library_1.gif" srcOff="l1_media_library_0.gif" url="media-library/find-media.aspx">
+				<levelTwos>
+					<levelTwo label="Find" url="media-library/find-media.aspx"/>
+					<levelTwo label="Reconcile" url="media-library/reconcile-inventory.aspx"/>
+					<levelTwo label="New" url="media-library/new-media-step-one.aspx"/>
+					<levelTwo label="Cases" url="media-library/case-browse.aspx"/>
+					<levelTwo label="Types" url="media-library/media-types.aspx"/>
+					<levelTwo label="RFID Initialize" url="media-library/rfid-tag-initialize.aspx"/>
+				</levelTwos>
+			</levelOne>
+			<levelOne label="Lists" srcOn="l1_lists_1.gif" srcOff="l1_lists_0.gif" url="lists/todays-list.aspx">
+				<levelTwos>
+					<levelTwo label="Today's" url="lists/todays-list.aspx"/>
+					<levelTwo label="Shipping" url="lists/send-lists.aspx"/>
+					<levelTwo label="Receiving" url="lists/receive-lists.aspx"/>
+					<levelTwo label="Disaster Recovery" url="lists/disaster-recovery-list-browse.aspx"/>
+				</levelTwos>
+			</levelOne>
+			<levelOne label="Reports" srcOn="l1_reports_1.gif" srcOff="l1_reports_0.gif" url="reports/report-list.aspx"/>
+			<levelOne label="Administrative Tools" srcOn="l1_admin_1.gif" srcOff="l1_admin_0.gif" url="administrative-tools/index.aspx">
+				<levelTwos>
+					<levelTwo label="Bar Code Formats" url="administrative-tools/bar-code-formats.aspx"/>
+					<levelTwo label="Case Formats" url="administrative-tools/case-formats.aspx"/>					
+					<levelTwo label="Users" url="administrative-tools/security.aspx"/>
+					<levelTwo label="Email Groups" url="administrative-tools/email-groups.aspx"/>
+					<levelTwo label="Accounts" url="administrative-tools/accounts.aspx"/>
+					<levelTwo label="Ftp Profiles" url="administrative-tools/ftp-profiles.aspx"/>
+					<levelTwo label="Site Maps" url="administrative-tools/view-sites.aspx"/>
+					<levelTwo label="Preferences" url="administrative-tools/system-defaults.aspx"/>
+				</levelTwos>
+			</levelOne>
+		</levelOnes>
+	</home>
+</navigation>

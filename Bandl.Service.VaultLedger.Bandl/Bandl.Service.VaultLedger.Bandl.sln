@@ -1,0 +1,83 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A834FA0A-FA00-446B-B6CC-9819064869C4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{30F3FFD0-BE3A-451A-8506-2AA04207B4EA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{81240D9B-3580-445E-AE1B-F234DFE6B5BD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{440DE8C1-D5F8-4E81-A41E-8C82D8D61F8D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{865D4EB9-0690-41A5-84CF-A090DC5B7DB3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {3E6D2C39-95C4-4582-B290-6ACE36DDDF51}
+		SccProjectUniqueName1 = BLL\\BLL.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = BLL\\
+		SccProjectUniqueName2 = DAL\\DAL.csproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = DAL\\
+		SccProjectUniqueName3 = Exceptions\\Exceptions.csproj
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = Exceptions\\
+		SccProjectUniqueName4 = Model\\Model.csproj
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = Model\\
+		SccProjectUniqueName5 = UI\\UI.csproj
+		SccLocalPath5 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection5 = UI\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A834FA0A-FA00-446B-B6CC-9819064869C4}.Debug.ActiveCfg = Debug|.NET
+		{A834FA0A-FA00-446B-B6CC-9819064869C4}.Debug.Build.0 = Debug|.NET
+		{A834FA0A-FA00-446B-B6CC-9819064869C4}.Release.ActiveCfg = Release|.NET
+		{A834FA0A-FA00-446B-B6CC-9819064869C4}.Release.Build.0 = Release|.NET
+		{30F3FFD0-BE3A-451A-8506-2AA04207B4EA}.Debug.ActiveCfg = Debug|.NET
+		{30F3FFD0-BE3A-451A-8506-2AA04207B4EA}.Debug.Build.0 = Debug|.NET
+		{30F3FFD0-BE3A-451A-8506-2AA04207B4EA}.Release.ActiveCfg = Release|.NET
+		{30F3FFD0-BE3A-451A-8506-2AA04207B4EA}.Release.Build.0 = Release|.NET
+		{81240D9B-3580-445E-AE1B-F234DFE6B5BD}.Debug.ActiveCfg = Debug|.NET
+		{81240D9B-3580-445E-AE1B-F234DFE6B5BD}.Debug.Build.0 = Debug|.NET
+		{81240D9B-3580-445E-AE1B-F234DFE6B5BD}.Release.ActiveCfg = Release|.NET
+		{81240D9B-3580-445E-AE1B-F234DFE6B5BD}.Release.Build.0 = Release|.NET
+		{440DE8C1-D5F8-4E81-A41E-8C82D8D61F8D}.Debug.ActiveCfg = Debug|.NET
+		{440DE8C1-D5F8-4E81-A41E-8C82D8D61F8D}.Debug.Build.0 = Debug|.NET
+		{440DE8C1-D5F8-4E81-A41E-8C82D8D61F8D}.Release.ActiveCfg = Release|.NET
+		{440DE8C1-D5F8-4E81-A41E-8C82D8D61F8D}.Release.Build.0 = Release|.NET
+		{865D4EB9-0690-41A5-84CF-A090DC5B7DB3}.Debug.ActiveCfg = Debug|.NET
+		{865D4EB9-0690-41A5-84CF-A090DC5B7DB3}.Debug.Build.0 = Debug|.NET
+		{865D4EB9-0690-41A5-84CF-A090DC5B7DB3}.Release.ActiveCfg = Release|.NET
+		{865D4EB9-0690-41A5-84CF-A090DC5B7DB3}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		CommonAssemblyDelaySign.cs = CommonAssemblyDelaySign.cs
+		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

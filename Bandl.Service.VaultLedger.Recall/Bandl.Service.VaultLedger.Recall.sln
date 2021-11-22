@@ -1,0 +1,109 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{1D69A605-D26A-4C86-B21D-7615FE87AE7B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{4D3CFB26-FF10-40EB-AC87-9D2ED87AD5C9}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.Bandl", "Gateway.Bandl\Gateway.Bandl.csproj", "{EFC44AB5-93FB-4387-B034-DE822497D42B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{FBBBE31D-93FA-4CDC-AFFC-F91A670EA293}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{F0235972-D8BA-4364-8E48-CDB3AD77D96A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{70DDD6B8-C9C8-4800-8040-2525F19EF228}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{6BE82170-74C5-46D8-9F36-E46B7F2A1F14}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 8
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {7FCEBA4F-99FA-47AB-AB07-6490B5ABB2EE}
+		SccProjectUniqueName1 = BLL\\BLL.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = BLL\\
+		SccProjectUniqueName2 = Collections\\Collections.csproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = Collections\\
+		SccProjectUniqueName3 = DAL\\DAL.csproj
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = DAL\\
+		SccProjectUniqueName4 = Exceptions\\Exceptions.csproj
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = Exceptions\\
+		SccProjectUniqueName5 = Gateway.Bandl\\Gateway.Bandl.csproj
+		SccLocalPath5 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection5 = Gateway.Bandl\\
+		SccProjectUniqueName6 = Model\\Model.csproj
+		SccLocalPath6 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection6 = Model\\
+		SccProjectUniqueName7 = UI\\UI.csproj
+		SccLocalPath7 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection7 = UI\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1D69A605-D26A-4C86-B21D-7615FE87AE7B}.Debug.ActiveCfg = Debug|.NET
+		{1D69A605-D26A-4C86-B21D-7615FE87AE7B}.Debug.Build.0 = Debug|.NET
+		{1D69A605-D26A-4C86-B21D-7615FE87AE7B}.Release.ActiveCfg = Release|.NET
+		{1D69A605-D26A-4C86-B21D-7615FE87AE7B}.Release.Build.0 = Release|.NET
+		{4D3CFB26-FF10-40EB-AC87-9D2ED87AD5C9}.Debug.ActiveCfg = Debug|.NET
+		{4D3CFB26-FF10-40EB-AC87-9D2ED87AD5C9}.Debug.Build.0 = Debug|.NET
+		{4D3CFB26-FF10-40EB-AC87-9D2ED87AD5C9}.Release.ActiveCfg = Release|.NET
+		{4D3CFB26-FF10-40EB-AC87-9D2ED87AD5C9}.Release.Build.0 = Release|.NET
+		{EFC44AB5-93FB-4387-B034-DE822497D42B}.Debug.ActiveCfg = Debug|.NET
+		{EFC44AB5-93FB-4387-B034-DE822497D42B}.Debug.Build.0 = Debug|.NET
+		{EFC44AB5-93FB-4387-B034-DE822497D42B}.Release.ActiveCfg = Release|.NET
+		{EFC44AB5-93FB-4387-B034-DE822497D42B}.Release.Build.0 = Release|.NET
+		{FBBBE31D-93FA-4CDC-AFFC-F91A670EA293}.Debug.ActiveCfg = Debug|.NET
+		{FBBBE31D-93FA-4CDC-AFFC-F91A670EA293}.Debug.Build.0 = Debug|.NET
+		{FBBBE31D-93FA-4CDC-AFFC-F91A670EA293}.Release.ActiveCfg = Release|.NET
+		{FBBBE31D-93FA-4CDC-AFFC-F91A670EA293}.Release.Build.0 = Release|.NET
+		{F0235972-D8BA-4364-8E48-CDB3AD77D96A}.Debug.ActiveCfg = Debug|.NET
+		{F0235972-D8BA-4364-8E48-CDB3AD77D96A}.Debug.Build.0 = Debug|.NET
+		{F0235972-D8BA-4364-8E48-CDB3AD77D96A}.Release.ActiveCfg = Release|.NET
+		{F0235972-D8BA-4364-8E48-CDB3AD77D96A}.Release.Build.0 = Release|.NET
+		{70DDD6B8-C9C8-4800-8040-2525F19EF228}.Debug.ActiveCfg = Debug|.NET
+		{70DDD6B8-C9C8-4800-8040-2525F19EF228}.Debug.Build.0 = Debug|.NET
+		{70DDD6B8-C9C8-4800-8040-2525F19EF228}.Release.ActiveCfg = Release|.NET
+		{70DDD6B8-C9C8-4800-8040-2525F19EF228}.Release.Build.0 = Release|.NET
+		{6BE82170-74C5-46D8-9F36-E46B7F2A1F14}.Debug.ActiveCfg = Debug|.NET
+		{6BE82170-74C5-46D8-9F36-E46B7F2A1F14}.Debug.Build.0 = Debug|.NET
+		{6BE82170-74C5-46D8-9F36-E46B7F2A1F14}.Release.ActiveCfg = Release|.NET
+		{6BE82170-74C5-46D8-9F36-E46B7F2A1F14}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		Accounts.config = Accounts.config
+		CommonAssemblyDelaySign.cs = CommonAssemblyDelaySign.cs
+		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
+		MedTypes.config = MedTypes.config
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandl.Utility.VaultLedger.AppSettings", "Bandl.Utility.VaultLedger.AppSettings\Bandl.Utility.VaultLedger.AppSettings.csproj", "{4952CED3-FBAF-41E0-90B5-BDADD89A3367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandl.Utility.VaultLedger.RegistryReader", "Bandl.Utility.VaultLedger.RegistryReader\Bandl.Utility.VaultLedger.RegistryReader.csproj", "{2BE899DD-F710-422D-B27A-AD00128F58B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandl.Utility.VaultLedger.DbUpdater", "Bandl.Utility.VaultLedger.DbUpdater\Bandl.Utility.VaultLedger.DbUpdater.csproj", "{A3955F6E-BB58-42EF-A78D-2DDEF2EAA922}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandl.Utility.VaultLedger.Other", "Bandl.Utility.VaultLedger.Other\Bandl.Utility.VaultLedger.Other.csproj", "{5C653E1B-EF3B-4075-B366-BA9DE46B66D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandl.Utility.VaultLedger.ConnectionString", "Bandl.Utility.VaultLedger.ConnectionString\Bandl.Utility.VaultLedger.ConnectionString.csproj", "{953B1867-3BBC-4093-B27F-5D68966FEBEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandl.Utility.VaultLedger.SqlLibRemoter", "Bandl.Utility.VaultLedger.SqlLibRemoter\Bandl.Utility.VaultLedger.SqlLibRemoter.csproj", "{85BEDDDE-7567-4A44-831E-DD71F76878A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{EA168F73-1A19-432F-BD34-8413BBB06D15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{81AA6A36-E5E6-437D-9D5B-DCA0245C00BB}"
+	ProjectSection(SolutionItems) = preProject
+		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 7
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Bandl.Utility.VaultLedger.AppSettings\\Bandl.Utility.VaultLedger.AppSettings.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Bandl.Utility.VaultLedger.AppSettings\\
+		SccProjectUniqueName2 = Bandl.Utility.VaultLedger.ConnectionString\\Bandl.Utility.VaultLedger.ConnectionString.csproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = Bandl.Utility.VaultLedger.ConnectionString\\
+		SccProjectUniqueName3 = Bandl.Utility.VaultLedger.DbUpdater\\Bandl.Utility.VaultLedger.DbUpdater.csproj
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = Bandl.Utility.VaultLedger.DbUpdater\\
+		SccProjectUniqueName4 = Bandl.Utility.VaultLedger.Other\\Bandl.Utility.VaultLedger.Other.csproj
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = Bandl.Utility.VaultLedger.Other\\
+		SccProjectUniqueName5 = Bandl.Utility.VaultLedger.RegistryReader\\Bandl.Utility.VaultLedger.RegistryReader.csproj
+		SccLocalPath5 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection5 = Bandl.Utility.VaultLedger.RegistryReader\\
+		SccProjectUniqueName6 = Bandl.Utility.VaultLedger.SqlLibRemoter\\Bandl.Utility.VaultLedger.SqlLibRemoter.csproj
+		SccLocalPath6 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection6 = Bandl.Utility.VaultLedger.SqlLibRemoter\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4952CED3-FBAF-41E0-90B5-BDADD89A3367}.Debug|x86.ActiveCfg = Debug|x86
+		{4952CED3-FBAF-41E0-90B5-BDADD89A3367}.Debug|x86.Build.0 = Debug|x86
+		{4952CED3-FBAF-41E0-90B5-BDADD89A3367}.Release|x86.ActiveCfg = Release|x86
+		{4952CED3-FBAF-41E0-90B5-BDADD89A3367}.Release|x86.Build.0 = Release|x86
+		{2BE899DD-F710-422D-B27A-AD00128F58B3}.Debug|x86.ActiveCfg = Debug|x86
+		{2BE899DD-F710-422D-B27A-AD00128F58B3}.Debug|x86.Build.0 = Debug|x86
+		{2BE899DD-F710-422D-B27A-AD00128F58B3}.Release|x86.ActiveCfg = Release|x86
+		{2BE899DD-F710-422D-B27A-AD00128F58B3}.Release|x86.Build.0 = Release|x86
+		{A3955F6E-BB58-42EF-A78D-2DDEF2EAA922}.Debug|x86.ActiveCfg = Debug|x86
+		{A3955F6E-BB58-42EF-A78D-2DDEF2EAA922}.Debug|x86.Build.0 = Debug|x86
+		{A3955F6E-BB58-42EF-A78D-2DDEF2EAA922}.Release|x86.ActiveCfg = Release|x86
+		{A3955F6E-BB58-42EF-A78D-2DDEF2EAA922}.Release|x86.Build.0 = Release|x86
+		{5C653E1B-EF3B-4075-B366-BA9DE46B66D4}.Debug|x86.ActiveCfg = Debug|x86
+		{5C653E1B-EF3B-4075-B366-BA9DE46B66D4}.Debug|x86.Build.0 = Debug|x86
+		{5C653E1B-EF3B-4075-B366-BA9DE46B66D4}.Release|x86.ActiveCfg = Release|x86
+		{5C653E1B-EF3B-4075-B366-BA9DE46B66D4}.Release|x86.Build.0 = Release|x86
+		{953B1867-3BBC-4093-B27F-5D68966FEBEE}.Debug|x86.ActiveCfg = Debug|x86
+		{953B1867-3BBC-4093-B27F-5D68966FEBEE}.Debug|x86.Build.0 = Debug|x86
+		{953B1867-3BBC-4093-B27F-5D68966FEBEE}.Release|x86.ActiveCfg = Release|x86
+		{953B1867-3BBC-4093-B27F-5D68966FEBEE}.Release|x86.Build.0 = Release|x86
+		{85BEDDDE-7567-4A44-831E-DD71F76878A7}.Debug|x86.ActiveCfg = Debug|x86
+		{85BEDDDE-7567-4A44-831E-DD71F76878A7}.Debug|x86.Build.0 = Debug|x86
+		{85BEDDDE-7567-4A44-831E-DD71F76878A7}.Release|x86.ActiveCfg = Release|x86
+		{85BEDDDE-7567-4A44-831E-DD71F76878A7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

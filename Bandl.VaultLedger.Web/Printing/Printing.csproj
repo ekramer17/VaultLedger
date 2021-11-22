@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6819235F-530D-432B-9903-E414E95F3F62}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Bandl.VaultLedger.Web.Printing</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\bandl.keys</AssemblyOriginatorKeyFile>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bandl.VaultLedger.Web.Printing</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccAuxPath />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v10.2.Core">
+      <HintPath>..\lib\devexpress\DevExpress.Charts.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.Data.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v10.2.Core">
+      <HintPath>..\lib\devexpress\DevExpress.PivotGrid.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v10.2.Core">
+      <HintPath>..\lib\devexpress\DevExpress.RichEdit.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.Utils.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.Web.ASPxEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.Web.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraCharts.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraPivotGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraReports.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2.Web">
+      <HintPath>..\lib\devexpress\DevExpress.XtraReports.v10.2.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraRichEdit.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Name>BLL</Name>
+      <Project>{DDF12B51-1094-4AD3-B898-78C21DA4E14C}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{C766727A-7145-46A8-976B-18D235E3D7A6}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyDelaySign.cs">
+      <Link>CommonAssemblyDelaySign.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dsAccount.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAccount.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsAuditTrail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAuditTrail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsBarCodeCase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBarCodeCase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsBarCodeMedium.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBarCodeMedium.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsDisasterCodeList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDisasterCodeList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsDisasterCodeListItem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDisasterCodeListItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsExternalSite.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExternalSite.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsFindMedium.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFindMedium.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsGeneral.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGeneral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsMedium.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMedium.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsOperator.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOperator.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsReceiveList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReceiveList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsReceiveListItem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReceiveListItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSendList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSendList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSendListItem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSendListItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSRDCList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSRDCList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsVaultDiscrepancy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVaultDiscrepancy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="XRAccountDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRAccounts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRAuditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRAuditorOperator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRAuditorReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRBarCodeCase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRBarCodeMedium.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRDRListDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRExternalSite.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRFindMedia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRFindMedium.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRMedia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRReceiveListDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRSendListDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRSendReceiveDCList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRUser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRUserDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRVaultDiscrepancy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="dsAccount.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAccount.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsAuditTrail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAuditTrail.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsBarCodeCase.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBarCodeCase.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsBarCodeMedium.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBarCodeMedium.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsDisasterCodeList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDisasterCodeList.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsDisasterCodeListItem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDisasterCodeListItem.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsExternalSite.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsExternalSite.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsFindMedium.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFindMedium.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsGeneral.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGeneral.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsMedium.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMedium.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsOperator.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOperator.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsReceiveList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReceiveList.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsReceiveListItem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReceiveListItem.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsSendList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSendList.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsSendListItem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSendListItem.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsSRDCList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSRDCList.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsVaultDiscrepancy.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVaultDiscrepancy.Designer.cs</LastGenOutput>
+    </Content>
+    <None Include="dsAccount.xsx">
+      <DependentUpon>dsAccount.xsd</DependentUpon>
+    </None>
+    <None Include="dsAuditTrail.xsx">
+      <DependentUpon>dsAuditTrail.xsd</DependentUpon>
+    </None>
+    <None Include="dsBarCodeCase.xsx">
+      <DependentUpon>dsBarCodeCase.xsd</DependentUpon>
+    </None>
+    <None Include="dsBarCodeMedium.xsx">
+      <DependentUpon>dsBarCodeMedium.xsd</DependentUpon>
+    </None>
+    <None Include="dsDisasterCodeList.xsx">
+      <DependentUpon>dsDisasterCodeList.xsd</DependentUpon>
+    </None>
+    <None Include="dsDisasterCodeListItem.xsx">
+      <DependentUpon>dsDisasterCodeListItem.xsd</DependentUpon>
+    </None>
+    <None Include="dsExternalSite.xsx">
+      <DependentUpon>dsExternalSite.xsd</DependentUpon>
+    </None>
+    <None Include="dsFindMedium.xsx">
+      <DependentUpon>dsFindMedium.xsd</DependentUpon>
+    </None>
+    <None Include="dsGeneral.xsx">
+      <DependentUpon>dsGeneral.xsd</DependentUpon>
+    </None>
+    <None Include="dsMedium.xsx">
+      <DependentUpon>dsMedium.xsd</DependentUpon>
+    </None>
+    <None Include="dsOperator.xsx">
+      <DependentUpon>dsOperator.xsd</DependentUpon>
+    </None>
+    <None Include="dsReceiveList.xsx">
+      <DependentUpon>dsReceiveList.xsd</DependentUpon>
+    </None>
+    <None Include="dsReceiveListItem.xsx">
+      <DependentUpon>dsReceiveListItem.xsd</DependentUpon>
+    </None>
+    <None Include="dsSendList.xsx">
+      <DependentUpon>dsSendList.xsd</DependentUpon>
+    </None>
+    <None Include="dsSendListItem.xsx">
+      <DependentUpon>dsSendListItem.xsd</DependentUpon>
+    </None>
+    <None Include="dsSRDCList.xsx">
+      <DependentUpon>dsSRDCList.xsd</DependentUpon>
+    </None>
+    <None Include="dsVaultDiscrepancy.xsx">
+      <DependentUpon>dsVaultDiscrepancy.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="XRAccountDetail.resx">
+      <DependentUpon>XRAccountDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRAccounts.resx">
+      <DependentUpon>XRAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRAuditor.resx">
+      <DependentUpon>XRAuditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRAuditorOperator.resx">
+      <DependentUpon>XRAuditorOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRAuditorReport.resx">
+      <DependentUpon>XRAuditorReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRBarCodeCase.resx">
+      <DependentUpon>XRBarCodeCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRBarCodeMedium.resx">
+      <DependentUpon>XRBarCodeMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDRListDetail.resx">
+      <DependentUpon>XRDRListDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRExternalSite.resx">
+      <DependentUpon>XRExternalSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRFindMedia.resx">
+      <DependentUpon>XRFindMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRFindMedium.resx">
+      <DependentUpon>XRFindMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRMedia.resx">
+      <DependentUpon>XRMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRReceiveListDetail.resx">
+      <DependentUpon>XRReceiveListDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRSendListDetail.resx">
+      <DependentUpon>XRSendListDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRSendReceiveDCList.resx">
+      <DependentUpon>XRSendReceiveDCList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRTemplate.resx">
+      <DependentUpon>XRTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRUser.resx">
+      <DependentUpon>XRUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRUserDetail.resx">
+      <DependentUpon>XRUserDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRVaultDiscrepancy.resx">
+      <DependentUpon>XRVaultDiscrepancy.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

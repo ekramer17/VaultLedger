@@ -1,0 +1,83 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{04100552-A553-4316-8C7D-8C33F43CD1A3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.Bandl", "Gateway.Bandl\Gateway.Bandl.csproj", "{D57EF2A7-8022-415B-89C4-561573C8480F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{EADA5E46-5814-4171-AA7F-641BE5831146}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer", "SQLServer\SQLServer.csproj", "{4A848B57-4726-4BCF-940C-5644F4CE84F8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{A1593615-E144-4F7B-8AE2-862F2082BE13}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {D7A5361E-C5FA-4AAA-878E-E768C3C2F04B}
+		SccProjectUniqueName1 = BLL\\BLL.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = BLL\\
+		SccProjectUniqueName2 = Gateway.Bandl\\Gateway.Bandl.csproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = Gateway.Bandl\\
+		SccProjectUniqueName3 = Model\\Model.csproj
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = Model\\
+		SccProjectUniqueName4 = SQLServer\\SQLServer.csproj
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = SQLServer\\
+		SccProjectUniqueName5 = UI\\UI.csproj
+		SccLocalPath5 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection5 = UI\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{04100552-A553-4316-8C7D-8C33F43CD1A3}.Debug.ActiveCfg = Debug|.NET
+		{04100552-A553-4316-8C7D-8C33F43CD1A3}.Debug.Build.0 = Debug|.NET
+		{04100552-A553-4316-8C7D-8C33F43CD1A3}.Release.ActiveCfg = Release|.NET
+		{04100552-A553-4316-8C7D-8C33F43CD1A3}.Release.Build.0 = Release|.NET
+		{D57EF2A7-8022-415B-89C4-561573C8480F}.Debug.ActiveCfg = Debug|.NET
+		{D57EF2A7-8022-415B-89C4-561573C8480F}.Debug.Build.0 = Debug|.NET
+		{D57EF2A7-8022-415B-89C4-561573C8480F}.Release.ActiveCfg = Release|.NET
+		{D57EF2A7-8022-415B-89C4-561573C8480F}.Release.Build.0 = Release|.NET
+		{EADA5E46-5814-4171-AA7F-641BE5831146}.Debug.ActiveCfg = Debug|.NET
+		{EADA5E46-5814-4171-AA7F-641BE5831146}.Debug.Build.0 = Debug|.NET
+		{EADA5E46-5814-4171-AA7F-641BE5831146}.Release.ActiveCfg = Release|.NET
+		{EADA5E46-5814-4171-AA7F-641BE5831146}.Release.Build.0 = Release|.NET
+		{4A848B57-4726-4BCF-940C-5644F4CE84F8}.Debug.ActiveCfg = Debug|.NET
+		{4A848B57-4726-4BCF-940C-5644F4CE84F8}.Debug.Build.0 = Debug|.NET
+		{4A848B57-4726-4BCF-940C-5644F4CE84F8}.Release.ActiveCfg = Release|.NET
+		{4A848B57-4726-4BCF-940C-5644F4CE84F8}.Release.Build.0 = Release|.NET
+		{A1593615-E144-4F7B-8AE2-862F2082BE13}.Debug.ActiveCfg = Debug|.NET
+		{A1593615-E144-4F7B-8AE2-862F2082BE13}.Debug.Build.0 = Debug|.NET
+		{A1593615-E144-4F7B-8AE2-862F2082BE13}.Release.ActiveCfg = Release|.NET
+		{A1593615-E144-4F7B-8AE2-862F2082BE13}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		CommonAssemblyDelaySign.cs = CommonAssemblyDelaySign.cs
+		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

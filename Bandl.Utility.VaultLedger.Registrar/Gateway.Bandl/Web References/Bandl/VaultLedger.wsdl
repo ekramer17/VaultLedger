@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.bandl.com" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.bandl.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bandl.com">
+      <s:element name="OnlineHelpParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="engine" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="project" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="window" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineHelpParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="engine" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="project" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="window" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MethodHeader" type="tns:MethodHeader" />
+      <s:complexType name="MethodHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountType" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMediumTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMediumTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMediumTypesResult" type="tns:ArrayOfMediumTypeDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMediumTypeDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MediumTypeDetails" nillable="true" type="tns:MediumTypeDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MediumTypeDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TwoSided" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Container" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PublishException">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="source" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stackTrace" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PublishExceptionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="NewScriptExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewScriptExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NewScriptExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadNextScript">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadNextScriptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadNextScriptResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="newVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveSubaccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subaccounts" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReceiveSubaccountsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetrieveLicenses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveLicensesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveLicensesResult" type="tns:ArrayOfProductLicenseDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductLicenseDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductLicenseDetails" nillable="true" type="tns:ProductLicenseDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductLicenseDetails">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Units" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LicenseType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IssueDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpireDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accountNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="accountType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSubscription">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subscription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSubscriptionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="accountType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAccountResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GrantLicense">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="accountType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="licenseType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="units" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="expireDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrantLicenseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuditListXmitSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="actionTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numItems" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="exception" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditListXmitSendResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuditListXmitReceive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="accountType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="actionTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numItems" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditListXmitReceiveResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebVersionRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="databaseVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebVersionRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebVersionRangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="OnlineHelpParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:OnlineHelpParameters" />
+  </wsdl:message>
+  <wsdl:message name="OnlineHelpParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:OnlineHelpParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlineHelpParametersMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMediumTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMediumTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetMediumTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMediumTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMediumTypesMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="PublishExceptionSoapIn">
+    <wsdl:part name="parameters" element="tns:PublishException" />
+  </wsdl:message>
+  <wsdl:message name="PublishExceptionSoapOut">
+    <wsdl:part name="parameters" element="tns:PublishExceptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="PublishExceptionMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="NewScriptExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:NewScriptExists" />
+  </wsdl:message>
+  <wsdl:message name="NewScriptExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:NewScriptExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewScriptExistsMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="DownloadNextScriptSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadNextScript" />
+  </wsdl:message>
+  <wsdl:message name="DownloadNextScriptSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadNextScriptResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadNextScriptMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveSubaccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveSubaccounts" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveSubaccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveSubaccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveSubaccountsMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveLicensesSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveLicenses" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveLicensesSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveLicensesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveLicensesMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAccount" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSubscriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSubscription" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSubscriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSubscriptionMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAccount" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAccountMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="GrantLicenseSoapIn">
+    <wsdl:part name="parameters" element="tns:GrantLicense" />
+  </wsdl:message>
+  <wsdl:message name="GrantLicenseSoapOut">
+    <wsdl:part name="parameters" element="tns:GrantLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrantLicenseMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="AuditListXmitSendSoapIn">
+    <wsdl:part name="parameters" element="tns:AuditListXmitSend" />
+  </wsdl:message>
+  <wsdl:message name="AuditListXmitSendSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditListXmitSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditListXmitSendMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="AuditListXmitReceiveSoapIn">
+    <wsdl:part name="parameters" element="tns:AuditListXmitReceive" />
+  </wsdl:message>
+  <wsdl:message name="AuditListXmitReceiveSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditListXmitReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditListXmitReceiveMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetWebVersionRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebVersionRange" />
+  </wsdl:message>
+  <wsdl:message name="GetWebVersionRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebVersionRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebVersionRangeMethodHeader">
+    <wsdl:part name="MethodHeader" element="tns:MethodHeader" />
+  </wsdl:message>
+  <wsdl:portType name="BandlServiceSoap">
+    <wsdl:operation name="OnlineHelpParameters">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns the string parameters needed to access the online help.</documentation>
+      <wsdl:input message="tns:OnlineHelpParametersSoapIn" />
+      <wsdl:output message="tns:OnlineHelpParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMediumTypes">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns the medium types from the database.</documentation>
+      <wsdl:input message="tns:GetMediumTypesSoapIn" />
+      <wsdl:output message="tns:GetMediumTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishException">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Receives an application exception.</documentation>
+      <wsdl:input message="tns:PublishExceptionSoapIn" />
+      <wsdl:output message="tns:PublishExceptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewScriptExists">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns true if there is an updated database script, else false.</documentation>
+      <wsdl:input message="tns:NewScriptExistsSoapIn" />
+      <wsdl:output message="tns:NewScriptExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadNextScript">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns the latest client database script if the version is different.</documentation>
+      <wsdl:input message="tns:DownloadNextScriptSoapIn" />
+      <wsdl:output message="tns:DownloadNextScriptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveSubaccounts">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Receives all the subaccounts for a particular global account.</documentation>
+      <wsdl:input message="tns:ReceiveSubaccountsSoapIn" />
+      <wsdl:output message="tns:ReceiveSubaccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLicenses">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieves all the license information for the given Recall client.</documentation>
+      <wsdl:input message="tns:RetrieveLicensesSoapIn" />
+      <wsdl:output message="tns:RetrieveLicensesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccount">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Creates a new account in the license database</documentation>
+      <wsdl:input message="tns:CreateAccountSoapIn" />
+      <wsdl:output message="tns:CreateAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccount">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Deletes an account from the license database by subscription</documentation>
+      <wsdl:input name="DeleteSubscription" message="tns:DeleteSubscriptionSoapIn" />
+      <wsdl:output name="DeleteSubscription" message="tns:DeleteSubscriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccount">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Deletes an account from the license database</documentation>
+      <wsdl:input message="tns:DeleteAccountSoapIn" />
+      <wsdl:output message="tns:DeleteAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrantLicense">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">OBSOLETE: Functionality incorporated into CreateAccount method.</documentation>
+      <wsdl:input message="tns:GrantLicenseSoapIn" />
+      <wsdl:output message="tns:GrantLicenseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditListXmitSend">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Receives a list transmit audit record for sending a list</documentation>
+      <wsdl:input message="tns:AuditListXmitSendSoapIn" />
+      <wsdl:output message="tns:AuditListXmitSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditListXmitReceive">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Receives a list transmit audit record for receiving a list</documentation>
+      <wsdl:input message="tns:AuditListXmitReceiveSoapIn" />
+      <wsdl:output message="tns:AuditListXmitReceiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebVersionRange">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieves the web application version range for the given database version.</documentation>
+      <wsdl:input message="tns:GetWebVersionRangeSoapIn" />
+      <wsdl:output message="tns:GetWebVersionRangeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BandlServiceSoap" type="tns:BandlServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="OnlineHelpParameters">
+      <soap:operation soapAction="http://www.bandl.com/OnlineHelpParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:OnlineHelpParametersMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediumTypes">
+      <soap:operation soapAction="http://www.bandl.com/GetMediumTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMediumTypesMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishException">
+      <soap:operation soapAction="http://www.bandl.com/PublishException" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PublishExceptionMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewScriptExists">
+      <soap:operation soapAction="http://www.bandl.com/NewScriptExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:NewScriptExistsMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadNextScript">
+      <soap:operation soapAction="http://www.bandl.com/DownloadNextScript" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DownloadNextScriptMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveSubaccounts">
+      <soap:operation soapAction="http://www.bandl.com/ReceiveSubaccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ReceiveSubaccountsMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLicenses">
+      <soap:operation soapAction="http://www.bandl.com/RetrieveLicenses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RetrieveLicensesMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccount">
+      <soap:operation soapAction="http://www.bandl.com/CreateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateAccountMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccount">
+      <soap:operation soapAction="http://www.bandl.com/DeleteSubscription" style="document" />
+      <wsdl:input name="DeleteSubscription">
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteSubscriptionMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteSubscription">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccount">
+      <soap:operation soapAction="http://www.bandl.com/DeleteAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteAccountMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrantLicense">
+      <soap:operation soapAction="http://www.bandl.com/GrantLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GrantLicenseMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditListXmitSend">
+      <soap:operation soapAction="http://www.bandl.com/AuditListXmitSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AuditListXmitSendMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditListXmitReceive">
+      <soap:operation soapAction="http://www.bandl.com/AuditListXmitReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AuditListXmitReceiveMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebVersionRange">
+      <soap:operation soapAction="http://www.bandl.com/GetWebVersionRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetWebVersionRangeMethodHeader" part="MethodHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BandlService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">A web service to be hosted at B&amp;L.</documentation>
+    <wsdl:port name="BandlServiceSoap" binding="tns:BandlServiceSoap">
+      <soap:address location="http://localhost/bandl.service.vaultledger.bandl/VaultLedger.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

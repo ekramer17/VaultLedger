@@ -1,0 +1,177 @@
+/* Global Table Elements */
+table {
+    padding:0;
+    border-collapse:collapse;
+}
+tr {
+    height:20px;
+}
+td {
+	padding: 0;
+	font-size: 11px;
+	color: #2E2B24;
+}
+table td strong {
+	color: #2E2B24;
+}
+td.textArea {
+	padding: 0 0 3px 0;
+	font-size: 11px;
+	height: 100%;
+	color: #333;
+}
+td.calendarCell {
+	vertical-align: top;
+}
+
+/* account detail table */
+.accountDetailTable td#leftPad {
+	padding: 0 0 0 7px;
+}
+
+.accountDetailTable td.leftPad {
+	padding: 0 0 0 7px;
+}
+
+.accountDetailTable td {
+	padding-bottom: 3px;
+}
+.accountDetailTable td strong {
+	color: #2E2B24;
+}
+.accountDetailTable td.tableRowSpacer {
+	background: url(../../img/bandl/misc/bg_table_row_spacer.gif) repeat-x;
+}
+
+/* detail table */
+.detailTable {
+	width: 100%;
+}
+.detailTable th {
+	border-right: 1px solid #F1F1F4;
+	padding: 3px 8px;
+	background: #5A5447;
+    white-space: nowrap;
+	text-align: left;
+	font-size: 11px;
+	color: #fff;
+}
+.detailTable th.checkBox
+{
+	text-align: center;
+	padding-left: 3px 8px;
+	width: 10px;
+}
+.detailTable td.checkBox
+{
+	text-align: left;
+	padding: 3px 8px;
+	width: 10px;
+	
+}
+.detailTable tr.header td.checkbox
+{
+	text-align: left;
+	padding: 3px 8px;
+	width: 10px;
+}
+.detailTable td.globe
+{
+	text-align: center;
+	padding-left: 3px 8px;
+	width: 10px;
+}
+.detailTable th.noBorder {
+	border: none;
+}
+.detailTable td {
+	border-right: 1px solid #F1F1F4;
+	padding: 3px 8px;
+    white-space: nowrap;
+	background: #fff;
+	text-align: left;
+	color: #2E2B24;
+	
+}
+.detailTable tr {
+    height:21px;
+}
+.detailTable td.noBorder {
+	border: none;
+}
+.detailTable tr.alternate td {
+	background: #F3F2EF;
+}
+/* Added by Joanne Bayog */
+.detailTable tr.header td
+{
+	border-right: 1px solid #F1F1F4;
+	padding: 3px 8px;
+	background: #5A5447;
+    white-space: nowrap;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+}
+.detailTable tr.header td.noBorder {
+	border: none;
+}
+
+
+
+/* detail table2 */
+.detailTable2 {
+	width: 761px;
+}
+.detailTable2 th {
+	border-right: 1px solid #F1F1F4;
+	padding: 3px 8px;
+	background: #5A5447;
+	text-align: left;
+	font-size: 11px;
+	color: #fff;
+}
+.detailTable2 th.checkBox {
+	text-align: center;
+	padding-left: 0;
+	width: 32px;
+}
+
+.detailTable2 td {
+	border: 1px solid grey;
+	padding: 3px 8px;
+	background: #fff;
+	text-align: left;
+	color: #2E2B24;
+	
+}
+.detailTable2 td.checkBox {
+	text-align: center;
+	padding-left: 0;
+	width: 32px;
+	
+}
+.detailTable2 td.noBorder {
+	border: solid 1px grey;
+}
+.detailTable2 tr.alternate td {
+	background: #F3F2EF;
+}
+
+.detailTable2 tr.header td
+{
+	border-right: 1px solid #F1F1F4;
+	padding: 3px 8px;
+	background: #5A5447;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+}
+.detailTable2 tr.header td.checkbox
+{
+	text-align: center;
+	padding-left: 0;
+	width: 32px;
+}

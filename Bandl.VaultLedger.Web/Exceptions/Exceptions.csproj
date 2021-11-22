@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22CC784D-F9C3-4F68-97F0-C16BBEC966ED}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Bandl.Library.VaultLedger.Exceptions</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\bandl.keys</AssemblyOriginatorKeyFile>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bandl.Library.VaultLedger.Exceptions</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccAuxPath />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyDelaySign.cs">
+      <Link>CommonAssemblyDelaySign.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLLException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLogicException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionErrorException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataLayerException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataStateException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExceptionPublisher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpectedDataException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExternalSiteException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LicenseExpiredException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LicenseLimitException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NoPrintDataException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectStateException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParserException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RouterException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueFormatException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueLengthException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueNullException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueRequiredException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

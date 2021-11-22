@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C766727A-7145-46A8-976B-18D235E3D7A6}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Bandl.Library.VaultLedger.Model</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\bandl.keys</AssemblyOriginatorKeyFile>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bandl.Library.VaultLedger.Model</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccAuxPath />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj">
+      <Name>Exceptions</Name>
+      <Project>{22CC784D-F9C3-4F68-97F0-C16BBEC966ED}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Security\Security.csproj">
+      <Name>Security</Name>
+      <Project>{0F09880E-CA5A-4C28-A5B5-6DA7B78F39A5}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyDelaySign.cs">
+      <Link>CommonAssemblyDelaySign.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccountDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AuditExpirationDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AuditTrailDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CacheKeys.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configurator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseVersionDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DateTimeClasses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Details.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisasterCodeListDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisasterCodeListItemDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmailGroupDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enumerations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExternalSiteDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FtpProfileDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InventoryConflictDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InventoryItemDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListCompareResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListPurgeDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MediumDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MediumFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MediumRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MediumTypeDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageLogger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OperatorDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatternDefaultCaseDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatternDefaultMediumDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatternDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatternIgnoreDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PreferenceDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductLicenseDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReceiveListDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReceiveListItemDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReceiveListScanDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReceiveListScanItemDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SealedCaseDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendListCaseDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendListCompareResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendListDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendListItemDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendListScanDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendListScanItemDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tracer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

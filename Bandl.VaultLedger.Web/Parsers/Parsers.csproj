@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5DD8CC7-198B-4C75-9881-685371053EA4}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Bandl.Library.VaultLedger.Parsers</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\bandl.keys</AssemblyOriginatorKeyFile>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bandl.Library.VaultLedger.Parsers</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccAuxPath />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\UI\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\UI\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Collections\Collections.csproj">
+      <Name>Collections</Name>
+      <Project>{857284F3-0E19-4C7F-AEA4-3C6E8367C9F9}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+      <Name>DALFactory</Name>
+      <Project>{BB7C2528-63DD-4C96-86F7-183D0A9CE96D}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj">
+      <Name>Exceptions</Name>
+      <Project>{22CC784D-F9C3-4F68-97F0-C16BBEC966ED}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Name>IDAL</Name>
+      <Project>{ECDAAC56-FCE2-4129-A00D-9569D3457E99}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\IParser\IParser.csproj">
+      <Name>IParser</Name>
+      <Project>{FE0B4A2E-6F87-43D8-B33F-C85E043950EA}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{C766727A-7145-46A8-976B-18D235E3D7A6}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyDelaySign.cs">
+      <Link>CommonAssemblyDelaySign.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ACS1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ACS2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ADP1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ADP2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AmericanCentury1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AmericanCentury2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AmericanCenturyDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AmericaOneParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ATOS1Parser.cs" />
+    <Compile Include="BatchCompareParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BatchDisasterListParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BatchInventoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BatchSendListParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BCBS1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BCBS2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLLIBParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BMCParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrightStorParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CA25DisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CA25Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CA25QuebecParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CanadaDefenseParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CanadianTire2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CanadianTireDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CanadianTireParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CBS2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CBSParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGI1DisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGI1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGI2DisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGI2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGI3DisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGI3Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGI4DisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CokeParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Conseco1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Conseco2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Conseco3Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Conseco4Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Countrywide1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Countrywide2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Countrywide3Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoverallParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeltaParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomesticReceiveParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomesticSendParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exxon1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exxon2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exxon3Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExxonDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FarmBureauParser.cs" />
+    <Compile Include="Fox1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fox2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fox3Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GalaxyParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GrummanParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IBM1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IBM2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImationInventoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImationParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IndianaFarmDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IndianaFarmParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="INGParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InventoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IronMountain2InventoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IronMountainInventoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IronMountainParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LACountyDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LATimesParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoewsParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Loto1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Loto2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MBTAParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="McDonaldsParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="McKesson2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="McKessonParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MediaExportDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NaviSiteParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavistarParser.cs" />
+    <Compile Include="Navistar2Parser.cs" />
+    <Compile Include="NJStateParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NYLifeParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParserFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PSECUParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Recall1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ricoh1Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ricoh2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ricoh3Parser.cs" />
+    <Compile Include="Ricoh4Parser.cs" />
+    <Compile Include="Ricoh5Parser.cs" />
+    <Compile Include="Ricoh6Parser.cs" />
+    <Compile Include="RMM3Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RQMMInventoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sanofi2Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sanofi3Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SanofiParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SprintParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StarParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TivoliParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TLMSDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TLMSInventoryParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UMBBankDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="USAGroupDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="USAGroupParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VeritasParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViacomParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VideotronDisasterParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VideotronParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VTMSParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

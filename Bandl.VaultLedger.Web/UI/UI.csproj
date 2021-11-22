@@ -1,0 +1,1240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08B6A2B2-5587-4F5C-B467-DE16B65FEEE6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Bandl.VaultLedger.Web.UI</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\bandl.keys</AssemblyOriginatorKeyFile>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bandl.VaultLedger.Web.UI</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccAuxPath />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v10.2.Core">
+      <HintPath>..\lib\devexpress\DevExpress.Charts.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.Data.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v10.2.Core">
+      <HintPath>..\lib\devexpress\DevExpress.PivotGrid.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v10.2.Core">
+      <HintPath>..\lib\devexpress\DevExpress.RichEdit.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.Utils.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.Web.ASPxEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.Web.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraCharts.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraPivotGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraReports.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2.Web">
+      <HintPath>..\lib\devexpress\DevExpress.XtraReports.v10.2.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2">
+      <HintPath>..\lib\devexpress\DevExpress.XtraRichEdit.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Name>BLL</Name>
+      <Project>{DDF12B51-1094-4AD3-B898-78C21DA4E14C}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Collections\Collections.csproj">
+      <Name>Collections</Name>
+      <Project>{857284F3-0E19-4C7F-AEA4-3C6E8367C9F9}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj">
+      <Name>Exceptions</Name>
+      <Project>{22CC784D-F9C3-4F68-97F0-C16BBEC966ED}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Gateway.Bandl\Gateway.Bandl.csproj">
+      <Name>Gateway.Bandl</Name>
+      <Project>{0288F084-569D-4935-89B3-A577304F7118}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Gateway.Recall\Gateway.Recall.csproj">
+      <Name>Gateway.Recall</Name>
+      <Project>{E2A7D10B-B7F7-4908-AEBB-4054702C6DE1}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{C766727A-7145-46A8-976B-18D235E3D7A6}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Printing\Printing.csproj">
+      <Name>Printing</Name>
+      <Project>{6819235F-530D-432B-9903-E414E95F3F62}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Router\Router.csproj">
+      <Name>Router</Name>
+      <Project>{E942FF76-8227-4825-BFB1-358DA5860A2F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Security\Security.csproj">
+      <Name>Security</Name>
+      <Project>{0F09880E-CA5A-4C28-A5B5-6DA7B78F39A5}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyDelaySign.cs">
+      <Link>CommonAssemblyDelaySign.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\account-detail.aspx.cs">
+      <DependentUpon>account-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\accounts.aspx.cs">
+      <DependentUpon>accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\add-sites.aspx.cs">
+      <DependentUpon>add-sites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\audit-expirations.aspx.cs">
+      <DependentUpon>audit-expirations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\bar-code-formats.aspx.cs">
+      <DependentUpon>bar-code-formats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\case-formats.aspx.cs">
+      <DependentUpon>case-formats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\direct-inject.aspx.cs">
+      <DependentUpon>direct-inject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\email-configure.aspx.cs">
+      <DependentUpon>email-configure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\email-group-detail.aspx.cs">
+      <DependentUpon>email-group-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\email-groups.aspx.cs">
+      <DependentUpon>email-groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\ftp-detail.aspx.cs">
+      <DependentUpon>ftp-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\ftp-profiles.aspx.cs">
+      <DependentUpon>ftp-profiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\list-email-alert.aspx.cs">
+      <DependentUpon>list-email-alert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\list-email-detail.aspx.cs">
+      <DependentUpon>list-email-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\list-email-status.aspx.cs">
+      <DependentUpon>list-email-status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\list-purge.aspx.cs">
+      <DependentUpon>list-purge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\list-statuses.aspx.cs">
+      <DependentUpon>list-statuses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\security.aspx.cs">
+      <DependentUpon>security.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\system-defaults.aspx.cs">
+      <DependentUpon>system-defaults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\user-detail.aspx.cs">
+      <DependentUpon>user-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrative-tools\view-sites.aspx.cs">
+      <DependentUpon>view-sites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errorPage.aspx.cs">
+      <DependentUpon>errorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="handlers\AsyncHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="handlers\AsyncRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="handlers\AsyncRequestState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="includes\BandlCalendar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="includes\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="includes\calendar.aspx.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\compare-discrepancy-one.aspx.cs">
+      <DependentUpon>compare-discrepancy-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\compare-discrepancy-three.aspx.cs">
+      <DependentUpon>compare-discrepancy-three.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\compare-discrepancy-two.aspx.cs">
+      <DependentUpon>compare-discrepancy-two.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\compare-file-view.aspx.cs">
+      <DependentUpon>compare-file-view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\disaster-recovery-list-append.aspx.cs">
+      <DependentUpon>disaster-recovery-list-append.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\disaster-recovery-list-browse.aspx.cs">
+      <DependentUpon>disaster-recovery-list-browse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\disaster-recovery-list-detail.aspx.cs">
+      <DependentUpon>disaster-recovery-list-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\disaster-recovery-list-edit.aspx.cs">
+      <DependentUpon>disaster-recovery-list-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\list-history-popup.aspx.cs">
+      <DependentUpon>list-history-popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\list-history-popup.aspx.designer.cs">
+      <DependentUpon>list-history-popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lists\new-compare-list-batch-file-step-one.aspx.cs">
+      <DependentUpon>new-compare-list-batch-file-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-compare-list-manual-scan.aspx.cs">
+      <DependentUpon>new-compare-list-manual-scan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-compare-list-rfid-file-step-one.aspx.cs">
+      <DependentUpon>new-compare-list-rfid-file-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-compare-receive-list-batch-file-step-one.aspx.cs">
+      <DependentUpon>new-compare-receive-list-batch-file-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-compare-receive-list-manual-scan.aspx.cs">
+      <DependentUpon>new-compare-receive-list-manual-scan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-compare-receive-list-rfid-file-step-one.aspx.cs">
+      <DependentUpon>new-compare-receive-list-rfid-file-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-dr-list-batch-file-step-one.aspx.cs">
+      <DependentUpon>new-dr-list-batch-file-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-dr-list-tms-file.aspx.cs">
+      <DependentUpon>new-dr-list-tms-file.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-list-batch-file-step-one.aspx.cs">
+      <DependentUpon>new-list-batch-file-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-list-manual-scan-step-one.aspx.cs">
+      <DependentUpon>new-list-manual-scan-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-list-rfid-file.aspx.cs">
+      <DependentUpon>new-list-rfid-file.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-list-tms-file.aspx.cs">
+      <DependentUpon>new-list-tms-file.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-receive-list-manual-scan-step-one.aspx.cs">
+      <DependentUpon>new-receive-list-manual-scan-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\new-receive-list-tms-file.aspx.cs">
+      <DependentUpon>new-receive-list-tms-file.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\receive-lists.aspx.cs">
+      <DependentUpon>receive-lists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\receiving-compare-online-reconcile.aspx.cs">
+      <DependentUpon>receiving-compare-online-reconcile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\receiving-list-detail.aspx.cs">
+      <DependentUpon>receiving-list-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\receiving-list-reconcile-rfid.aspx.cs">
+      <DependentUpon>receiving-list-reconcile-rfid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\receiving-list-reconcile.aspx.cs">
+      <DependentUpon>receiving-list-reconcile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\send-lists.aspx.cs">
+      <DependentUpon>send-lists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\shipping-compare-online-reconcile.aspx.cs">
+      <DependentUpon>shipping-compare-online-reconcile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\shipping-list-detail-edit-case.aspx.cs">
+      <DependentUpon>shipping-list-detail-edit-case.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\shipping-list-detail.aspx.cs">
+      <DependentUpon>shipping-list-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\shipping-list-reconcile-rfid.aspx.cs">
+      <DependentUpon>shipping-list-reconcile-rfid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\shipping-list-reconcile.aspx.cs">
+      <DependentUpon>shipping-list-reconcile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\tms-lists-receiving.aspx.cs">
+      <DependentUpon>tms-lists-receiving.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\tms-lists-shipping.aspx.cs">
+      <DependentUpon>tms-lists-shipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\todays-list.aspx.cs">
+      <DependentUpon>todays-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lists\todays-receiving-list.aspx.cs">
+      <DependentUpon>todays-receiving-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\case-browse.aspx.cs">
+      <DependentUpon>case-browse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\case-detail.aspx.cs">
+      <DependentUpon>case-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\find-media.aspx.cs">
+      <DependentUpon>find-media.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\media-detail.aspx.cs">
+      <DependentUpon>media-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\media-edit.aspx.cs">
+      <DependentUpon>media-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\media-type-detail.aspx.cs">
+      <DependentUpon>media-type-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\media-types.aspx.cs">
+      <DependentUpon>media-types.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\new-media-step-one.aspx.cs">
+      <DependentUpon>new-media-step-one.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\new-media-step-two.aspx.cs">
+      <DependentUpon>new-media-step-two.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\reconcile-inventory-batch.aspx.cs">
+      <DependentUpon>reconcile-inventory-batch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\reconcile-inventory-rfid.aspx.cs">
+      <DependentUpon>reconcile-inventory-rfid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\reconcile-inventory.aspx.cs">
+      <DependentUpon>reconcile-inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="media-library\rfid-tag-initialize.aspx.cs">
+      <DependentUpon>rfid-tag-initialize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="print.aspx.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports\auditor-filter.aspx.cs">
+      <DependentUpon>auditor-filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports\list-rpt-filter.aspx.cs">
+      <DependentUpon>list-rpt-filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports\media-rpt-filter.aspx.cs">
+      <DependentUpon>media-rpt-filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports\report-list-three.aspx.cs">
+      <DependentUpon>report-list-three.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports\report-list-two.aspx.cs">
+      <DependentUpon>report-list-two.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports\report-list.aspx.cs">
+      <DependentUpon>report-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="status.aspx.cs">
+      <DependentUpon>status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="waitPage.aspx.cs">
+      <DependentUpon>waitPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="administrative-tools\account-detail.aspx" />
+    <Content Include="administrative-tools\accounts.aspx" />
+    <Content Include="administrative-tools\add-sites.aspx" />
+    <Content Include="administrative-tools\audit-expirations.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\bar-code-formats.aspx" />
+    <Content Include="administrative-tools\case-formats.aspx" />
+    <Content Include="administrative-tools\direct-inject.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\email-configure.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\email-group-detail.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\email-groups.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\ftp-detail.aspx" />
+    <Content Include="administrative-tools\ftp-profiles.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\index.aspx" />
+    <Content Include="administrative-tools\list-email-alert.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\list-email-detail.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\list-email-status.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\list-purge.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="administrative-tools\list-statuses.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="administrative-tools\security.aspx" />
+    <Content Include="administrative-tools\system-defaults.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="administrative-tools\user-detail.aspx" />
+    <Content Include="administrative-tools\view-sites.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="errorPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="includes\baseBody.inc" />
+    <Content Include="includes\baseHead.inc" />
+    <Content Include="includes\calendar.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="includes\calendar.js">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="includes\date.js" />
+    <Content Include="includes\functions.js" />
+    <Content Include="includes\msgBox.js" />
+    <Content Include="includes\RoboHelp_CSH.js" />
+    <Content Include="includes\tablechecker.js" />
+    <Content Include="includes\tablescroller.js" />
+    <Content Include="lists\compare-discrepancy-one.aspx" />
+    <Content Include="lists\compare-discrepancy-three.aspx" />
+    <Content Include="lists\compare-discrepancy-two.aspx" />
+    <Content Include="lists\compare-file-view.aspx" />
+    <Content Include="lists\disaster-recovery-list-append.aspx" />
+    <Content Include="lists\disaster-recovery-list-browse.aspx" />
+    <Content Include="lists\disaster-recovery-list-detail.aspx" />
+    <Content Include="lists\disaster-recovery-list-edit.aspx" />
+    <Content Include="lists\list-history-popup.aspx" />
+    <Content Include="lists\new-compare-list-batch-file-step-one.aspx" />
+    <Content Include="lists\new-compare-list-manual-scan.aspx" />
+    <Content Include="lists\new-compare-list-rfid-file-step-one.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\new-compare-receive-list-batch-file-step-one.aspx" />
+    <Content Include="lists\new-compare-receive-list-manual-scan.aspx" />
+    <Content Include="lists\new-compare-receive-list-rfid-file-step-one.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\new-dr-list-batch-file-step-one.aspx" />
+    <Content Include="lists\new-dr-list-tms-file.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\new-list-batch-file-step-one.aspx" />
+    <Content Include="lists\new-list-manual-scan-step-one.aspx" />
+    <Content Include="lists\new-list-rfid-file.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\new-list-tms-file.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="lists\new-receive-list-manual-scan-step-one.aspx" />
+    <Content Include="lists\new-receive-list-tms-file.aspx" />
+    <Content Include="lists\receive-lists.aspx" />
+    <Content Include="lists\receiving-compare-online-reconcile.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\receiving-list-detail.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="lists\receiving-list-reconcile-rfid.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\receiving-list-reconcile.aspx" />
+    <Content Include="lists\send-lists.aspx" />
+    <Content Include="lists\shipping-compare-online-reconcile.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\shipping-list-detail-edit-case.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\shipping-list-detail.aspx" />
+    <Content Include="lists\shipping-list-reconcile-rfid.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\shipping-list-reconcile.aspx" />
+    <Content Include="lists\tms-lists-receiving.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="lists\tms-lists-shipping.aspx" />
+    <Content Include="lists\todays-list.aspx" />
+    <Content Include="lists\todays-receiving-list.aspx" />
+    <Content Include="login.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="media-library\case-browse.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="media-library\case-detail.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="media-library\find-media.aspx" />
+    <Content Include="media-library\media-detail.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="media-library\media-edit.aspx" />
+    <Content Include="media-library\media-type-detail.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="media-library\media-types.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="media-library\new-media-step-one.aspx" />
+    <Content Include="media-library\new-media-step-two.aspx" />
+    <Content Include="media-library\reconcile-inventory-batch.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="media-library\reconcile-inventory-rfid.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="media-library\reconcile-inventory.aspx" />
+    <Content Include="media-library\rfid-tag-initialize.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="print.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="reports\auditor-filter.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="reports\list-rpt-filter.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="reports\media-rpt-filter.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="reports\report-list-three.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="reports\report-list-two.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="reports\report-list.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="resources\img\bandl\btns\bg_tab_four_1_0.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_four_1_1.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_four_2_0.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_four_2_1.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_four_4_0.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_four_4_1.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_one_1_1.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_three_1_0.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_three_1_1.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_three_2_0.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_three_2_1.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_three_3_0.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_three_3_1.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_two_1_0.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_two_1_1.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_two_2_0.gif" />
+    <Content Include="resources\img\bandl\btns\bg_tab_two_2_1.gif" />
+    <Content Include="resources\img\bandl\btns\form_large_top.gif" />
+    <Content Include="resources\img\bandl\btns\form_large_top_plus.gif" />
+    <Content Include="resources\img\bandl\btns\form_medium.gif" />
+    <Content Include="resources\img\bandl\btns\form_medium_large.gif" />
+    <Content Include="resources\img\bandl\btns\form_medium_plus.gif" />
+    <Content Include="resources\img\bandl\btns\form_medium_top.gif" />
+    <Content Include="resources\img\bandl\btns\form_small.gif" />
+    <Content Include="resources\img\bandl\btns\form_small_go.gif" />
+    <Content Include="resources\img\bandl\btns\form_small_top.gif" />
+    <Content Include="resources\img\bandl\btns\form_small_top_plus.gif" />
+    <Content Include="resources\img\bandl\btns\l1_admin_0.gif" />
+    <Content Include="resources\img\bandl\btns\l1_admin_1.gif" />
+    <Content Include="resources\img\bandl\btns\l1_home_0.gif" />
+    <Content Include="resources\img\bandl\btns\l1_home_1.gif" />
+    <Content Include="resources\img\bandl\btns\l1_lists_0.gif" />
+    <Content Include="resources\img\bandl\btns\l1_lists_1.gif" />
+    <Content Include="resources\img\bandl\btns\l1_media_library_0.gif" />
+    <Content Include="resources\img\bandl\btns\l1_media_library_1.gif" />
+    <Content Include="resources\img\bandl\btns\l1_reports_0.gif" />
+    <Content Include="resources\img\bandl\btns\l1_reports_1.gif" />
+    <Content Include="resources\img\bandl\icons\bg_arrow_icon.gif" />
+    <Content Include="resources\img\bandl\icons\bg_arrow_icon_r.gif" />
+    <Content Include="resources\img\bandl\icons\bg_export_icon.gif" />
+    <Content Include="resources\img\bandl\icons\bg_print_icon.gif" />
+    <Content Include="resources\img\bandl\icons\calendar_icon.gif" />
+    <Content Include="resources\img\bandl\icons\icon-lists.gif" />
+    <Content Include="resources\img\bandl\icons\icon-media-library.gif" />
+    <Content Include="resources\img\bandl\icons\icon-reports.gif" />
+    <Content Include="resources\img\bandl\icons\icon-system-admin.gif" />
+    <Content Include="resources\img\bandl\icons\vaultledger.ico" />
+    <Content Include="resources\img\bandl\interface\bg_body.gif" />
+    <Content Include="resources\img\bandl\interface\bg_constants_btns.gif" />
+    <Content Include="resources\img\bandl\interface\bg_levelones.gif" />
+    <Content Include="resources\img\bandl\interface\bg_topbar.gif" />
+    <Content Include="resources\img\bandl\interface\logo.gif" />
+    <Content Include="resources\img\bandl\interface\logoHeaderNoBack.jpg" />
+    <Content Include="resources\img\bandl\interface\logoNoBack.jpg" />
+    <Content Include="resources\img\bandl\interface\logo_header.gif" />
+    <Content Include="resources\img\bandl\interface\logo_imation.gif" />
+    <Content Include="resources\img\bandl\interface\logo_imation_header.gif" />
+    <Content Include="resources\img\bandl\interface\please_wait.gif" />
+    <Content Include="resources\img\bandl\misc\bg_table_row_spacer.gif" />
+    <Content Include="resources\img\bandl\misc\globe1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_four_1_0.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_four_1_1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_four_2_0.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_four_2_1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_four_4_0.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_four_4_1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_one_1_1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_three_1_0.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_three_1_1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_three_2_0.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_three_2_1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_three_3_0.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_three_3_1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_two_1_0.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_two_1_1.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_two_2_0.gif" />
+    <Content Include="resources\img\recall\btns\bg_tab_two_2_1.gif" />
+    <Content Include="resources\img\recall\btns\form_large_top.gif" />
+    <Content Include="resources\img\recall\btns\form_large_top_plus.gif" />
+    <Content Include="resources\img\recall\btns\form_medium.gif" />
+    <Content Include="resources\img\recall\btns\form_medium_large.gif" />
+    <Content Include="resources\img\recall\btns\form_medium_plus.gif" />
+    <Content Include="resources\img\recall\btns\form_medium_top.gif" />
+    <Content Include="resources\img\recall\btns\form_small.gif" />
+    <Content Include="resources\img\recall\btns\form_small_go.gif" />
+    <Content Include="resources\img\recall\btns\form_small_top.gif" />
+    <Content Include="resources\img\recall\btns\form_small_top_plus.gif" />
+    <Content Include="resources\img\recall\btns\l1_admin_0.gif" />
+    <Content Include="resources\img\recall\btns\l1_admin_1.gif" />
+    <Content Include="resources\img\recall\btns\l1_home_0.gif" />
+    <Content Include="resources\img\recall\btns\l1_home_1.gif" />
+    <Content Include="resources\img\recall\btns\l1_lists_0.gif" />
+    <Content Include="resources\img\recall\btns\l1_lists_1.gif" />
+    <Content Include="resources\img\recall\btns\l1_media_library_0.gif" />
+    <Content Include="resources\img\recall\btns\l1_media_library_1.gif" />
+    <Content Include="resources\img\recall\btns\l1_reports_0.gif" />
+    <Content Include="resources\img\recall\btns\l1_reports_1.gif" />
+    <Content Include="resources\img\recall\icons\bg_arrow_icon.gif" />
+    <Content Include="resources\img\recall\icons\bg_arrow_icon_r.gif" />
+    <Content Include="resources\img\recall\icons\bg_export_icon.gif" />
+    <Content Include="resources\img\recall\icons\bg_print_icon.gif" />
+    <Content Include="resources\img\recall\icons\calendar_icon.gif" />
+    <Content Include="resources\img\recall\icons\icon-lists.gif" />
+    <Content Include="resources\img\recall\icons\icon-media-library.gif" />
+    <Content Include="resources\img\recall\icons\icon-reports.gif" />
+    <Content Include="resources\img\recall\icons\icon-system-admin.gif" />
+    <Content Include="resources\img\recall\interface\bg_body.gif" />
+    <Content Include="resources\img\recall\interface\bg_constants_btns.gif" />
+    <Content Include="resources\img\recall\interface\bg_levelones.gif" />
+    <Content Include="resources\img\recall\interface\bg_topbar.gif" />
+    <Content Include="resources\img\recall\interface\logo.gif" />
+    <Content Include="resources\img\recall\interface\logoHeaderNoBack.JPG" />
+    <Content Include="resources\img\recall\interface\logoNoBack.JPG" />
+    <Content Include="resources\img\recall\interface\logo_header.gif" />
+    <Content Include="resources\img\recall\interface\please_wait.gif" />
+    <Content Include="resources\img\recall\misc\bg_table_row_spacer.gif" />
+    <Content Include="resources\img\recall\misc\globe1.gif" />
+    <Content Include="resources\style\bandl\main.css" />
+    <Content Include="resources\style\bandl\msgBox.css" />
+    <Content Include="resources\style\bandl\tables.css" />
+    <Content Include="resources\style\recall\main.css" />
+    <Content Include="resources\style\recall\msgBox.css" />
+    <Content Include="resources\style\recall\tables.css" />
+    <Content Include="rfid\applet\OBIDISC4J.jar" />
+    <Content Include="sounds\msgBox.wav" />
+    <Content Include="status.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="waitPage.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="xml\constants.xslt" />
+    <Content Include="xml\levelOnes.xslt" />
+    <Content Include="xml\levelTwos.xslt" />
+    <Content Include="xml\navigation.xml" />
+    <EmbeddedResource Include="administrative-tools\account-detail.aspx.resx">
+      <DependentUpon>account-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\accounts.aspx.resx">
+      <DependentUpon>accounts.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\add-sites.aspx.resx">
+      <DependentUpon>add-sites.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\audit-expirations.aspx.resx">
+      <DependentUpon>audit-expirations.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\bar-code-formats.aspx.resx">
+      <DependentUpon>bar-code-formats.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\case-formats.aspx.resx">
+      <DependentUpon>case-formats.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\direct-inject.aspx.resx">
+      <DependentUpon>direct-inject.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\email-configure.aspx.resx">
+      <DependentUpon>email-configure.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\email-group-detail.aspx.resx">
+      <DependentUpon>email-group-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\email-groups.aspx.resx">
+      <DependentUpon>email-groups.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\ftp-detail.aspx.resx">
+      <DependentUpon>ftp-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\ftp-profiles.aspx.resx">
+      <DependentUpon>ftp-profiles.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\index.aspx.resx">
+      <DependentUpon>index.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\list-email-alert.aspx.resx">
+      <DependentUpon>list-email-alert.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\list-email-detail.aspx.resx">
+      <DependentUpon>list-email-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\list-email-status.aspx.resx">
+      <DependentUpon>list-email-status.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\list-purge.aspx.resx">
+      <DependentUpon>list-purge.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\list-statuses.aspx.resx">
+      <DependentUpon>list-statuses.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\security.aspx.resx">
+      <DependentUpon>security.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\system-defaults.aspx.resx">
+      <DependentUpon>system-defaults.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\user-detail.aspx.resx">
+      <DependentUpon>user-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrative-tools\view-sites.aspx.resx">
+      <DependentUpon>view-sites.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="default.aspx.resx">
+      <DependentUpon>default.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="errorPage.aspx.resx">
+      <DependentUpon>errorPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\calendar.aspx.resx">
+      <DependentUpon>calendar.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="lists\compare-discrepancy-one.aspx.resx">
+      <DependentUpon>compare-discrepancy-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\compare-discrepancy-three.aspx.resx">
+      <DependentUpon>compare-discrepancy-three.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\compare-discrepancy-two.aspx.resx">
+      <DependentUpon>compare-discrepancy-two.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\compare-file-view.aspx.resx">
+      <DependentUpon>compare-file-view.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\disaster-recovery-list-append.aspx.resx">
+      <DependentUpon>disaster-recovery-list-append.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\disaster-recovery-list-browse.aspx.resx">
+      <DependentUpon>disaster-recovery-list-browse.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\disaster-recovery-list-detail.aspx.resx">
+      <DependentUpon>disaster-recovery-list-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\disaster-recovery-list-edit.aspx.resx">
+      <DependentUpon>disaster-recovery-list-edit.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-compare-list-batch-file-step-one.aspx.resx">
+      <DependentUpon>new-compare-list-batch-file-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-compare-list-manual-scan.aspx.resx">
+      <DependentUpon>new-compare-list-manual-scan.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-compare-list-rfid-file-step-one.aspx.resx">
+      <DependentUpon>new-compare-list-rfid-file-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-compare-receive-list-batch-file-step-one.aspx.resx">
+      <DependentUpon>new-compare-receive-list-batch-file-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-compare-receive-list-manual-scan.aspx.resx">
+      <DependentUpon>new-compare-receive-list-manual-scan.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-compare-receive-list-rfid-file-step-one.aspx.resx">
+      <DependentUpon>new-compare-receive-list-rfid-file-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-dr-list-batch-file-step-one.aspx.resx">
+      <DependentUpon>new-dr-list-batch-file-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-dr-list-tms-file.aspx.resx">
+      <DependentUpon>new-dr-list-tms-file.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-list-batch-file-step-one.aspx.resx">
+      <DependentUpon>new-list-batch-file-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-list-manual-scan-step-one.aspx.resx">
+      <DependentUpon>new-list-manual-scan-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-list-rfid-file.aspx.resx">
+      <DependentUpon>new-list-rfid-file.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-list-tms-file.aspx.resx">
+      <DependentUpon>new-list-tms-file.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-receive-list-manual-scan-step-one.aspx.resx">
+      <DependentUpon>new-receive-list-manual-scan-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\new-receive-list-tms-file.aspx.resx">
+      <DependentUpon>new-receive-list-tms-file.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\receive-lists.aspx.resx">
+      <DependentUpon>receive-lists.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\receiving-compare-online-reconcile.aspx.resx">
+      <DependentUpon>receiving-compare-online-reconcile.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\receiving-list-detail.aspx.resx">
+      <DependentUpon>receiving-list-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\receiving-list-reconcile-rfid.aspx.resx">
+      <DependentUpon>receiving-list-reconcile-rfid.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\receiving-list-reconcile.aspx.resx">
+      <DependentUpon>receiving-list-reconcile.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\send-lists.aspx.resx">
+      <DependentUpon>send-lists.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\shipping-compare-online-reconcile.aspx.resx">
+      <DependentUpon>shipping-compare-online-reconcile.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\shipping-list-detail-edit-case.aspx.resx">
+      <DependentUpon>shipping-list-detail-edit-case.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\shipping-list-detail.aspx.resx">
+      <DependentUpon>shipping-list-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\shipping-list-reconcile-rfid.aspx.resx">
+      <DependentUpon>shipping-list-reconcile-rfid.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\shipping-list-reconcile.aspx.resx">
+      <DependentUpon>shipping-list-reconcile.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\tms-lists-receiving.aspx.resx">
+      <DependentUpon>tms-lists-receiving.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\tms-lists-shipping.aspx.resx">
+      <DependentUpon>tms-lists-shipping.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\todays-list.aspx.resx">
+      <DependentUpon>todays-list.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\todays-receiving-list.aspx.resx">
+      <DependentUpon>todays-receiving-list.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.aspx.resx">
+      <DependentUpon>login.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\case-browse.aspx.resx">
+      <DependentUpon>case-browse.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\case-detail.aspx.resx">
+      <DependentUpon>case-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\find-media.aspx.resx">
+      <DependentUpon>find-media.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\media-detail.aspx.resx">
+      <DependentUpon>media-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\media-edit.aspx.resx">
+      <DependentUpon>media-edit.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\media-type-detail.aspx.resx">
+      <DependentUpon>media-type-detail.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\media-types.aspx.resx">
+      <DependentUpon>media-types.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\new-media-step-one.aspx.resx">
+      <DependentUpon>new-media-step-one.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\new-media-step-two.aspx.resx">
+      <DependentUpon>new-media-step-two.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\reconcile-inventory-batch.aspx.resx">
+      <DependentUpon>reconcile-inventory-batch.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\reconcile-inventory-rfid.aspx.resx">
+      <DependentUpon>reconcile-inventory-rfid.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\reconcile-inventory.aspx.resx">
+      <DependentUpon>reconcile-inventory.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="media-library\rfid-tag-initialize.aspx.resx">
+      <DependentUpon>rfid-tag-initialize.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print.aspx.resx">
+      <DependentUpon>print.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\auditor-filter.aspx.resx">
+      <DependentUpon>auditor-filter.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\list-rpt-filter.aspx.resx">
+      <DependentUpon>list-rpt-filter.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\media-rpt-filter.aspx.resx">
+      <DependentUpon>media-rpt-filter.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\report-list-three.aspx.resx">
+      <DependentUpon>report-list-three.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\report-list-two.aspx.resx">
+      <DependentUpon>report-list-two.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\report-list.aspx.resx">
+      <DependentUpon>report-list.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="status.aspx.resx">
+      <DependentUpon>status.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="waitPage.aspx.resx">
+      <DependentUpon>waitPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="handlers\requesthandlerasync.ashx" />
+    <None Include="rfid\applet\netscape.zip" />
+    <None Include="rfid\applet\RFIDApplet.class" />
+    <None Include="rfid\applet\RFIDControl.class" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3291</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Bandl.VaultLedger.Web</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+</Project>
