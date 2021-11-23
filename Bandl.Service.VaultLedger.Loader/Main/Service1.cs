@@ -105,6 +105,8 @@ namespace Bandl.Service.VaultLedger.Loader
 			_timer.Elapsed += new System.Timers.ElapsedEventHandler(OnTimerEvent);
 			_timer.AutoReset = false;
 			_timer.Start();
+
+			Tracer.Trace("SERVICE STARTED");
 		}
 
 		/// <summary>
@@ -117,6 +119,8 @@ namespace Bandl.Service.VaultLedger.Loader
 
 			while (_worker.IsWorking)
 				Thread.Sleep(5000);
+
+			Tracer.Trace("SERVICE STOPPED");
 		}
 
 
