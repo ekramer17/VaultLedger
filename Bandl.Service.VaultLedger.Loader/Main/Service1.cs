@@ -7,6 +7,7 @@ namespace Bandl.Service.VaultLedger.Loader
 {
     public class Service1 : System.ServiceProcess.ServiceBase
     {
+		private const int TIMER_INTERVAL = 60000;
         private static string _name = "VaultLedger Autoloader" + Configurator.Suffix;
 		private System.Timers.Timer _timer;
 		private Worker _worker = null;
@@ -126,15 +127,29 @@ namespace Bandl.Service.VaultLedger.Loader
 
 		protected void OnTimerEvent(object source, System.Timers.ElapsedEventArgs e)
 		{
+			Tracer.Trace("TIMER EVENT SIGNALLED");
 			// Stop timer
 			_timer.Stop();
+			Tracer.Trace("Timer stopped");
 
 			// Work through uploaded files
-			_worker.ProcessFiles();
-
-			// Set timer to wake up in 10 seconds
-			_timer.Interval = 10000;
-			_timer.Start();
+			try
+			{
+				_worker.ProcessFiles();
+				Tracer.Trace("Files processed (if any present)");
+			}
+			catch (Exception ex)
+			{
+				Tracer.Trace("Exception caught in timer event handler");
+				Tracer.Trace(ex);
+			}
+			finally
+			{
+				// Set timer to wake up after specified interval
+				_timer.Interval = TIMER_INTERVAL;
+				_timer.Start();
+				Tracer.Trace("Timer restarted");
+			}
 		}
 
 

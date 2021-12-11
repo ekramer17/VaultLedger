@@ -17,23 +17,29 @@ namespace Bandl.Service.VaultLedger.Loader
         {
             try
             {
-                using (MailMessage mail = new MailMessage())
+                var splitter = new char[] { ';' };
+                var recipients = Configurator.EmailRecipients.Split(splitter, StringSplitOptions.RemoveEmptyEntries);
+
+                if (recipients.Length != 0)
                 {
-                    mail.From = new MailAddress("autoloader@na1.vaultledger.com", "VaultLedger AutoLoader");
-                    mail.Priority = MailPriority.High;
-                    mail.Subject = String.Format("{0} Autoloader Failure", Configurator.ProductName);
-                    // Recipients
-                    foreach (String recipient in Configurator.EmailRecipients.Split(new char[] { ';' }))
+                    using (MailMessage mail = new MailMessage())
                     {
-                        mail.To.Add(new MailAddress(recipient));
-                    }
-                    // Create message
-                    mail.Body = String.Format("An error has occurred in processing the attached report:\r\n\r\n{0}", message);
-                    mail.Attachments.Add(new Attachment(filename));
-                    // Send the message
-                    using (var s = new SmtpClient(Configurator.EmailServer))
-                    {
-                        s.Send(mail);
+                        mail.From = new MailAddress("autoloader@na1.vaultledger.com", "VaultLedger AutoLoader");
+                        mail.Priority = MailPriority.High;
+                        mail.Subject = String.Format("{0} Autoloader Failure", Configurator.ProductName);
+                        // Recipients
+                        foreach (String recipient in Configurator.EmailRecipients.Split(new char[] { ';' }))
+                        {
+                            mail.To.Add(new MailAddress(recipient));
+                        }
+                        // Create message
+                        mail.Body = String.Format("An error has occurred in processing the attached report:\r\n\r\n{0}", message);
+                        mail.Attachments.Add(new Attachment(filename));
+                        // Send the message
+                        using (var s = new SmtpClient(Configurator.EmailServer))
+                        {
+                            s.Send(mail);
+                        }
                     }
                 }
             }

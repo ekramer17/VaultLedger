@@ -122,6 +122,8 @@ namespace Bandl.Service.VaultLedger.Loader
         /// </summary>
         public void ProcessFile()
         {
+            System.Threading.Thread.Sleep(5000);
+            /*
             byte[] f1 = null;   // file content
             string view1 = null;
             HttpWebResponse r1 = null;
@@ -257,6 +259,7 @@ namespace Bandl.Service.VaultLedger.Loader
             }
 
             TraceMessages.Add("[DIAG]Complete");
+            */
         }
     }
 }
