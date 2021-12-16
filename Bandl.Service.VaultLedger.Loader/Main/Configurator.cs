@@ -17,21 +17,21 @@ namespace Bandl.Service.VaultLedger.Loader
         {
             get
             {
-                string s = ConfigurationManager.AppSettings["Xmit"];
+                string s1 = ConfigurationManager.AppSettings["Xmit"];
                 // Which?
-                if (s == null || s.Length == 0)
+                if (s1 == null || s1.Length == 0)
                 {
                     return String.Empty;
                 }
-                else if (s[0] == 'R')
+                else if (s1[0] == 'R')
                 {
                     return "R";
                 }
-                else if (s[0] == 'S')
+                else if (s1[0] == 'S')
                 {
                     return "S";
                 }
-                else if (s[0] == 'B')
+                else if (s1[0] == 'B')
                 {
                     return "B";
                 }
@@ -46,23 +46,21 @@ namespace Bandl.Service.VaultLedger.Loader
         {
             get
             {
-                string s = ConfigurationManager.AppSettings["Url"];
-                return s != null ? s.Substring(0, s.LastIndexOf('/') + 1) : String.Empty;
+                string s1 = ConfigurationManager.AppSettings["Url"];
+                return s1 != null ? s1.Substring(0, s1.LastIndexOf('/') + 1) : String.Empty;
             }
         }
 
         public static string NetworkCredentials
         {
-            get
-            {
+            get {
                 return ConfigurationManager.AppSettings["NetworkCredentials"];
             }
         }
 
         public static string EmailServer
         {
-            get
-            {
+            get {
                 return ConfigurationManager.AppSettings["EmailServer"];
             }
         }
@@ -102,17 +100,32 @@ namespace Bandl.Service.VaultLedger.Loader
             }
         }
 
-        public static string[] Ignores
+        public static string Ignores
         {
-            get
-            {
-                string s = ConfigurationManager.AppSettings["Ignores"];
-                if (s == null || s.Trim().Length == 0)
-                    return new string[0];
-                else
-                    return s.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            get {
+                string s1 = ConfigurationManager.AppSettings["Ignores"];
+                s1 = s1 != null ? (s1.EndsWith(";") ? s1 : s1 + ";") : String.Empty;
+                return s1.ToLower();
             }
         }
+
+        //public static string Filter
+        //{
+        //    get
+        //    {
+        //        string s1 = ConfigurationManager.AppSettings["Filter"];
+        //        return s1 != null ? s1 : String.Empty;
+        //    }
+        //}
+
+        //public static string FilterType
+        //{
+        //    get
+        //    {
+        //        string s1 = ConfigurationManager.AppSettings["FilterType"];
+        //        return s1 == null || s1.ToUpper().StartsWith("R") == false ? "N" : "R"; // normal, regex
+        //    }
+        //}
 
         public static string Login
         {

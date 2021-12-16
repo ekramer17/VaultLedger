@@ -30,18 +30,23 @@ namespace Bandl.Service.VaultLedger.Loader
 
     public class Tracer
     {
+        private static readonly object traceLock = new object();
+
         public static void Trace(string message)
         {
-            try
+            lock (traceLock)
             {
-                using (StreamWriter w = new StreamWriter(Path.Combine(Application.StartupPath, "trace.log"), true))
+                try
                 {
-                    w.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + " : " + message);
+                    using (StreamWriter w = new StreamWriter(Path.Combine(Application.StartupPath, "trace.log"), true))
+                    {
+                        w.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + " : " + message);
+                    }
                 }
-            }
-            catch
-            {
-                ;
+                catch
+                {
+                    ;
+                }
             }
         }
 

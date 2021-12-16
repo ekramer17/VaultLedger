@@ -17,8 +17,9 @@ namespace Bandl.Service.VaultLedger.Loader
         {
             try
             {
-                var splitter = new char[] { ';' };
-                var recipients = Configurator.EmailRecipients.Split(splitter, StringSplitOptions.RemoveEmptyEntries);
+                var recipients = Configurator
+                    .EmailRecipients
+                    .Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
 
                 if (recipients.Length != 0)
                 {
@@ -28,18 +29,14 @@ namespace Bandl.Service.VaultLedger.Loader
                         mail.Priority = MailPriority.High;
                         mail.Subject = String.Format("{0} Autoloader Failure", Configurator.ProductName);
                         // Recipients
-                        foreach (String recipient in Configurator.EmailRecipients.Split(new char[] { ';' }))
-                        {
+                        foreach (String recipient in recipients)
                             mail.To.Add(new MailAddress(recipient));
-                        }
                         // Create message
                         mail.Body = String.Format("An error has occurred in processing the attached report:\r\n\r\n{0}", message);
                         mail.Attachments.Add(new Attachment(filename));
                         // Send the message
                         using (var s = new SmtpClient(Configurator.EmailServer))
-                        {
                             s.Send(mail);
-                        }
                     }
                 }
             }

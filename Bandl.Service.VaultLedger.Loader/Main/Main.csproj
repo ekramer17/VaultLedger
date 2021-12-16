@@ -123,7 +123,6 @@
     <Compile Include="Email.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Worker.cs" />
     <Compile Include="Processor.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -136,6 +135,7 @@
     <Compile Include="Win32.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Worker.cs" />
     <EmbeddedResource Include="Service1.resx">
       <DependentUpon>Service1.cs</DependentUpon>
     </EmbeddedResource>
