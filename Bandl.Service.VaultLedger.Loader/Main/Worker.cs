@@ -9,9 +9,6 @@ namespace Bandl.Service.VaultLedger.Loader
 {
     public class Worker
     {
-        private readonly Random _random = new Random(); 
-        
-        
         private bool stop;
         private readonly object queueLock = new object();
         private Queue<string> queue;
@@ -163,24 +160,6 @@ namespace Bandl.Service.VaultLedger.Loader
                 }
             }
         }
-
-
-        //private void MoveFile(String source, String target)
-        //{
-        //    while (!stop)
-        //    {
-        //        try
-        //        {
-        //            File.Move(source, target);
-        //            break;
-        //        }
-        //        catch
-        //        {
-        //            GC.Collect();
-        //            Thread.Sleep(2000);
-        //        }
-        //    }
-        //}
 
         private bool ProcessFile(string path)
         {

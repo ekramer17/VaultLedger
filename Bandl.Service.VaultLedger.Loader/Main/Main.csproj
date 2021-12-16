@@ -123,6 +123,7 @@
     <Compile Include="Email.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Installer.cs" />
     <Compile Include="Processor.cs">
       <SubType>Code</SubType>
     </Compile>
